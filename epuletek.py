@@ -16,10 +16,17 @@ for i in range(0, len(lista), 1):
     print(sor_lista[4])
     print(sor_lista[5])
     print(sor_lista[6])
-    epulet=Epulet(int(sor_lista[0]), int(sor_lista[1]), sor_lista[2], int(sor_lista[3]))
+    epulet=Epulet(sor_lista[0], sor_lista[1], sor_lista[2], sor_lista[3], int(sor_lista[4]), int(sor_lista[5]), int(sor_lista[6]))
     epulet_lista.append(epulet)
 
 for i in range(0, len(epulet_lista), 1):
     print(f"{epulet_lista[i].nev}, {epulet_lista[i].varos}, {epulet_lista[i].orszag}, {epulet_lista[i].magassag}, {epulet_lista[i].emelet}, {epulet_lista[i].ev}")
+
+
+def gepek_szama(lista):
+    db: int= 0
+    for i in range(0, len(lista), 1):
+        db += lista[i].nev
+    return db
 
 
